@@ -15,7 +15,7 @@ cursor = connection.cursor()
 #introduction (welcome message, present options, ask user where they want to go)
 def intro():
     os.system('cls')
-    print("Welcome to the Elite Bank, please input 1 - 6 to go to these options below or print '-1' to leave:")
+    print("Welcome to the SWAMP Bank, please input 1 - 6 to go to these options below or print '-1' to leave:")
     options = ['create an account', 'delete an account', 'modify an account', 'check balance', 'withdraw', 'deposit']
     for option in options:
         print(f"{str(options.index(option) + 1)}. {option}")
@@ -152,7 +152,7 @@ def check_balance():
 
     #prints balance from user_acc if correct PIN
     if cursor != None:
-        print("balance: " + str(user_acc[(len(user_acc)) - 1]))
+        print("SWAMP balance: " + str(user_acc[(len(user_acc)) - 1]))
         time.sleep(2)
     else:
         print("Please enter a valid PIN.")
@@ -169,10 +169,10 @@ def change_balance(user_input):
     print()
     try:
         if user_input == '5':
-            user_choice = int(input("How much do you want to withdraw: "))
+            user_choice = int(input("How much do you want to withdraw from the SWAMP: "))
             new_balance = user_acc[(len(user_acc)) - 1] - user_choice
         else:
-            user_choice = int(input("How much do you want to deposit: "))
+            user_choice = int(input("How much do you want to deposit into the SWAMP: "))
             new_balance = user_acc[(len(user_acc)) - 1] + user_choice
     except:
         print("Please enter the correction information.")
